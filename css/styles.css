@@ -46,6 +46,11 @@ h1,h2,h3,h4{color:var(--text-heading);line-height:1.2;font-weight:700;font-famil
 /* ===== HERO ===== */
 .hero{padding:140px 0 80px;position:relative;overflow:hidden}
 .hero-centered{text-align:center;max-width:600px;margin:0 auto}
+.hero-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-text h1{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:16px;color:var(--text-heading)}
+.hero-text p{text-align:left;margin:0 0 32px}
+.hero-actions{justify-content:flex-start}
+.hero-ascii{display:flex;justify-content:center;align-items:center}
 .hero-centered h1{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:16px;color:var(--text-heading)}
 .hero-centered h1 .accent{color:var(--accent)}
 .ascii-art{color:var(--text-muted);font-family:var(--mono);font-size:clamp(.55rem,1.2vw,.85rem);line-height:1.2;margin:20px auto;text-align:left;display:inline-block;opacity:.5;user-select:none}
@@ -245,6 +250,10 @@ h1,h2,h3,h4{color:var(--text-heading);line-height:1.2;font-weight:700;font-famil
   .nav-links a{padding:12px 20px;text-align:left;border-bottom:1px solid rgba(48,54,61,.3)}
   .hamburger{display:flex}
   .hero-centered{text-align:center}
+  .hero-split{grid-template-columns:1fr;text-align:center}
+  .hero-text p{text-align:center}
+  .hero-actions{justify-content:center}
+  .hero-ascii{display:none}
   .card-grid,.services-grid,.service-options{grid-template-columns:1fr}
   .testimonials-grid{grid-template-columns:1fr}
   .location-grid,.contact-grid{grid-template-columns:1fr}
