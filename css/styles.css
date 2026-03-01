@@ -53,7 +53,7 @@ h1,h2,h3,h4{color:var(--text-heading);line-height:1.2;font-weight:700;font-famil
 .hero-ascii{display:flex;justify-content:center;align-items:center}
 .hero-centered h1{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:16px;color:var(--text-heading)}
 .hero-centered h1 .accent{color:var(--accent)}
-.ascii-art{color:var(--text-muted);font-family:var(--mono);font-size:clamp(.55rem,1.2vw,.85rem);line-height:1.2;margin:20px auto;text-align:left;display:inline-block;opacity:.5;user-select:none}
+.ascii-art{color:var(--accent);font-family:var(--mono);font-size:clamp(.4rem,.9vw,.7rem);line-height:1.15;margin:0;text-align:left;display:inline-block;opacity:.7;user-select:none}
 .hero-centered p{font-size:clamp(.9rem,2vw,1.05rem);color:var(--text-muted);margin-bottom:28px;font-family:var(--font)}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:var(--radius);font-weight:600;font-size:.85rem;cursor:pointer;transition:all var(--transition);font-family:var(--mono)}
 .btn-primary{background:transparent;color:var(--accent);border:1px solid var(--accent);text-transform:uppercase;letter-spacing:1px}
