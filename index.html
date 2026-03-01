@@ -11,13 +11,13 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="container">
-      <a href="index.html" class="nav-logo">Byte<span>Box</span></a>
+      <a href="index.html" class="nav-logo"><span class="prompt">></span> ByteBox<span>_</span></a>
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="booking.html">Book Now</a>
-        <a href="location.html">Location</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">home</a>
+        <a href="services.html">services</a>
+        <a href="booking.html">book</a>
+        <a href="location.html">location</a>
+        <a href="contact.html">contact</a>
       </div>
       <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
         <span></span><span></span><span></span>
@@ -26,13 +26,37 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero scanlines">
     <div class="container">
-      <h1>Build Your Dream PC</h1>
-      <p>Custom builds, expert repairs, and quality parts — right in the heart of Ottawa.</p>
-      <div class="hero-actions">
-        <a href="booking.html" class="btn btn-primary">Book a Consultation</a>
-        <a href="services.html" class="btn btn-secondary">View Services</a>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1><span class="accent" id="typed-heading"></span><span class="cursor"></span></h1>
+          <p>Custom builds, expert repairs, and quality parts — right in the heart of Ottawa. No bloatware, no markup BS.</p>
+          <div class="hero-actions">
+            <a href="booking.html" class="btn btn-primary">[ BOOK NOW ]</a>
+            <a href="services.html" class="btn btn-secondary">> view_services</a>
+          </div>
+        </div>
+        <div class="hero-ascii" aria-hidden="true">
+    ┌──────────────────────┐
+    │  ┌────────────────┐  │
+    │  │  ██████████████ │  │
+    │  │  ██ ByteBox ██ │  │
+    │  │  ██████████████ │  │
+    │  └────────────────┘  │
+    │  ┌──┐  ┌──┐  [PWR]  │
+    │  │▓▓│  │▓▓│   (●)   │
+    │  │▓▓│  │▓▓│         │
+    │  └──┘  └──┘  ════   │
+    │  ░░░░░░░░░░  ════   │
+    │  ░░░░░░░░░░         │
+    └──────────┬───────────┘
+               │
+    ┌──────────┴───────────┐
+    │  ╔══════════════════╗│
+    │  ║  > ready_        ║│
+    │  ╚══════════════════╝│
+    └──────────────────────┘</div>
       </div>
     </div>
   </section>
@@ -40,35 +64,47 @@
   <!-- SERVICES OVERVIEW -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">What We Do</h2>
-      <p class="section-sub">From custom gaming rigs to quick repairs, we've got your PC needs covered.</p>
+      <div class="section-header">
+        <span class="prefix">// what_we_do</span>
+        <h2 class="section-title">Services</h2>
+        <p class="section-sub center">From custom gaming rigs to quick repairs, we've got your PC needs covered.</p>
+      </div>
       <div class="card-grid">
 
         <div class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <div class="card-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            custom_builds.sh
           </div>
-          <h3>Custom PC Builds</h3>
-          <p>Hand-picked components, expert assembly, and cable management that'll make you proud to show off your rig.</p>
-          <a href="services.html" class="card-link">Learn more →</a>
+          <div class="card-body">
+            <h3>Custom PC Builds</h3>
+            <p>Hand-picked components, expert assembly, and cable management that'll make you proud to show off your rig.</p>
+            <a href="services.html" class="card-link">> learn_more</a>
+          </div>
         </div>
 
         <div class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          <div class="card-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            repairs.sh
           </div>
-          <h3>Repairs & Upgrades</h3>
-          <p>GPU swaps, RAM upgrades, virus removal — fast turnaround so you're back to gaming in no time.</p>
-          <a href="services.html" class="card-link">Learn more →</a>
+          <div class="card-body">
+            <h3>Repairs & Upgrades</h3>
+            <p>GPU swaps, RAM upgrades, virus removal — fast turnaround so you're back to gaming in no time.</p>
+            <a href="services.html" class="card-link">> learn_more</a>
+          </div>
         </div>
 
         <div class="card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          <div class="card-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            diagnostics.sh
           </div>
-          <h3>PC Diagnostics</h3>
-          <p>Full system health check — we'll find the bottleneck, the failing drive, or the thermal issue slowing you down.</p>
-          <a href="services.html" class="card-link">Learn more →</a>
+          <div class="card-body">
+            <h3>PC Diagnostics</h3>
+            <p>Full system health check — we'll find the bottleneck, the failing drive, or the thermal issue slowing you down.</p>
+            <a href="services.html" class="card-link">> learn_more</a>
+          </div>
         </div>
 
       </div>
@@ -78,26 +114,29 @@
   <!-- TESTIMONIALS -->
   <section class="section" style="background:var(--bg-card)">
     <div class="container">
-      <h2 class="section-title">What Our Customers Say</h2>
-      <p class="section-sub">Don't take our word for it — here's what the community thinks.</p>
+      <div class="section-header">
+        <span class="prefix">// customer_reviews</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-sub center">Don't take our word for it — here's what the community thinks.</p>
+      </div>
       <div class="testimonials-grid">
 
         <div class="testimonial">
           <div class="testimonial-stars">★★★★★</div>
           <p>"Built my dream gaming rig through ByteBox. The cable management alone was worth it — my case looks like a work of art. Runs Cyberpunk at max settings like butter."</p>
-          <div class="testimonial-author">— Marcus T., Kanata</div>
+          <div class="testimonial-author">@marcus_t // Kanata</div>
         </div>
 
         <div class="testimonial">
           <div class="testimonial-stars">★★★★★</div>
           <p>"My PC was randomly crashing during streams. ByteBox diagnosed a failing PSU in 20 minutes, swapped it out same day. Lifesavers."</p>
-          <div class="testimonial-author">— Priya S., Centretown</div>
+          <div class="testimonial-author">@priya_s // Centretown</div>
         </div>
 
         <div class="testimonial">
           <div class="testimonial-stars">★★★★★</div>
           <p>"Brought in my kid's laptop loaded with malware. They cleaned it up, installed a fresh OS, and even upgraded the RAM while they were at it. Great price too."</p>
-          <div class="testimonial-author">— Jean-Luc D., Gatineau</div>
+          <div class="testimonial-author">@jeanluc_d // Gatineau</div>
         </div>
 
       </div>
@@ -108,10 +147,10 @@
   <section class="section">
     <div class="container">
       <div class="hours-bar">
-        <h3>Business Hours</h3>
+        <h3>// system_status</h3>
         <div class="hours-list">
-          <div><strong>Mon – Fri</strong><br>9:00 AM – 6:00 PM</div>
-          <div><strong>Saturday</strong><br>9:00 AM – 6:00 PM</div>
+          <div><span class="status-dot"></span><strong>Mon – Fri</strong><br>9:00 AM – 6:00 PM</div>
+          <div><span class="status-dot"></span><strong>Saturday</strong><br>9:00 AM – 6:00 PM</div>
           <div><strong>Sunday</strong><br>Closed</div>
         </div>
       </div>
@@ -121,19 +160,20 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
+      <div class="footer-divider">════════════════════════════════════════════════════════════════</div>
       <div class="footer-grid">
         <div>
-          <div class="footer-logo">Byte<span>Box</span></div>
+          <div class="footer-logo">> ByteBox_</div>
           <p>Ottawa's trusted destination for custom PC builds, expert repairs, and quality components since 2019.</p>
         </div>
         <div>
-          <h4>Quick Links</h4>
+          <h4>Nav</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="booking.html">Book Now</a></li>
-            <li><a href="location.html">Location</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">home</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="booking.html">book</a></li>
+            <li><a href="location.html">location</a></li>
+            <li><a href="contact.html">contact</a></li>
           </ul>
         </div>
         <div>
@@ -144,10 +184,14 @@
         </div>
       </div>
       <div class="footer-bottom">
-        © 2026 ByteBox Ottawa. All rights reserved. | SEG3525 UI/UX Design Project
+        © 2026 ByteBox Ottawa — all rights reserved | SEG3525 UI/UX Design Project | made with ♥ and caffeine
       </div>
     </div>
   </footer>
+
+  <div class="kbd-hint" aria-hidden="true">
+    <kbd>S</kbd> services &nbsp; <kbd>B</kbd> book &nbsp; <kbd>H</kbd> home
+  </div>
 
   <script src="js/main.js"></script>
 </body>

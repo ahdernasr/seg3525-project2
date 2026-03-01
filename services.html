@@ -10,13 +10,13 @@
 
   <nav class="nav">
     <div class="container">
-      <a href="index.html" class="nav-logo">Byte<span>Box</span></a>
+      <a href="index.html" class="nav-logo"><span class="prompt">></span> ByteBox<span>_</span></a>
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="booking.html">Book Now</a>
-        <a href="location.html">Location</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">home</a>
+        <a href="services.html">services</a>
+        <a href="booking.html">book</a>
+        <a href="location.html">location</a>
+        <a href="contact.html">contact</a>
       </div>
       <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
         <span></span><span></span><span></span>
@@ -26,7 +26,7 @@
 
   <div class="page-header">
     <div class="container">
-      <h1>Our Services</h1>
+      <h1><span class="prompt-sym">></span> Our Services</h1>
       <p>From full custom builds to quick fixes — we handle it all.</p>
     </div>
   </div>
@@ -36,74 +36,92 @@
       <div class="services-grid">
 
         <a href="booking.html?service=custom-build" class="service-card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <div class="service-card-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            custom_build.cfg
           </div>
-          <h3>Custom PC Build</h3>
-          <p>Full consultation, hand-picked parts, expert assembly, OS installation, and stress testing included.</p>
-          <div class="price-row">
-            <span class="card-price">From $800</span>
-            <span class="card-link">Book now →</span>
+          <div class="service-card-body">
+            <h3>Custom PC Build</h3>
+            <p>Full consultation, hand-picked parts, expert assembly, OS installation, and stress testing included.</p>
+            <div class="price-row">
+              <span class="card-price">from $800.00</span>
+              <span class="card-link">> book_now</span>
+            </div>
           </div>
         </a>
 
         <a href="booking.html?service=diagnostics" class="service-card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <div class="service-card-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            diagnostics.cfg
           </div>
-          <h3>PC Diagnostics</h3>
-          <p>Complete system health check — thermal analysis, drive health, RAM test, bottleneck identification.</p>
-          <div class="price-row">
-            <span class="card-price">$50</span>
-            <span class="card-link">Book now →</span>
+          <div class="service-card-body">
+            <h3>PC Diagnostics</h3>
+            <p>Complete system health check — thermal analysis, drive health, RAM test, bottleneck identification.</p>
+            <div class="price-row">
+              <span class="card-price">$50.00</span>
+              <span class="card-link">> book_now</span>
+            </div>
           </div>
         </a>
 
         <a href="booking.html?service=gpu-upgrade" class="service-card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/></svg>
+          <div class="service-card-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            gpu_upgrade.cfg
           </div>
-          <h3>GPU Upgrade Installation</h3>
-          <p>We'll install your new graphics card, update drivers, and run benchmarks to make sure it's performing.</p>
-          <div class="price-row">
-            <span class="card-price">$40</span>
-            <span class="card-link">Book now →</span>
+          <div class="service-card-body">
+            <h3>GPU Upgrade Installation</h3>
+            <p>We'll install your new graphics card, update drivers, and run benchmarks to make sure it's performing.</p>
+            <div class="price-row">
+              <span class="card-price">$40.00</span>
+              <span class="card-link">> book_now</span>
+            </div>
           </div>
         </a>
 
         <a href="booking.html?service=ram-storage" class="service-card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="10" x2="10" y2="14"/><line x1="14" y1="10" x2="14" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg>
+          <div class="service-card-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            ram_storage.cfg
           </div>
-          <h3>RAM / Storage Upgrade</h3>
-          <p>More RAM, faster SSD, or both. Includes data migration if you're upgrading your boot drive.</p>
-          <div class="price-row">
-            <span class="card-price">$30</span>
-            <span class="card-link">Book now →</span>
+          <div class="service-card-body">
+            <h3>RAM / Storage Upgrade</h3>
+            <p>More RAM, faster SSD, or both. Includes data migration if you're upgrading your boot drive.</p>
+            <div class="price-row">
+              <span class="card-price">$30.00</span>
+              <span class="card-link">> book_now</span>
+            </div>
           </div>
         </a>
 
         <a href="booking.html?service=virus-removal" class="service-card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="service-card-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            virus_removal.cfg
           </div>
-          <h3>Virus Removal & OS Install</h3>
-          <p>Deep malware scan and removal, or a fresh OS installation with all your drivers configured.</p>
-          <div class="price-row">
-            <span class="card-price">$60</span>
-            <span class="card-link">Book now →</span>
+          <div class="service-card-body">
+            <h3>Virus Removal & OS Install</h3>
+            <p>Deep malware scan and removal, or a fresh OS installation with all your drivers configured.</p>
+            <div class="price-row">
+              <span class="card-price">$60.00</span>
+              <span class="card-link">> book_now</span>
+            </div>
           </div>
         </a>
 
         <a href="booking.html?service=cable-management" class="service-card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          <div class="service-card-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            cable_mgmt.cfg
           </div>
-          <h3>Cable Management & Cleanup</h3>
-          <p>Internal dust cleaning, thermal paste reapplication, and cable routing that looks as good as it performs.</p>
-          <div class="price-row">
-            <span class="card-price">$35</span>
-            <span class="card-link">Book now →</span>
+          <div class="service-card-body">
+            <h3>Cable Management & Cleanup</h3>
+            <p>Internal dust cleaning, thermal paste reapplication, and cable routing that looks as good as it performs.</p>
+            <div class="price-row">
+              <span class="card-price">$35.00</span>
+              <span class="card-link">> book_now</span>
+            </div>
           </div>
         </a>
 
@@ -113,19 +131,20 @@
 
   <footer class="footer">
     <div class="container">
+      <div class="footer-divider">════════════════════════════════════════════════════════════════</div>
       <div class="footer-grid">
         <div>
-          <div class="footer-logo">Byte<span>Box</span></div>
+          <div class="footer-logo">> ByteBox_</div>
           <p>Ottawa's trusted destination for custom PC builds, expert repairs, and quality components since 2019.</p>
         </div>
         <div>
-          <h4>Quick Links</h4>
+          <h4>Nav</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="booking.html">Book Now</a></li>
-            <li><a href="location.html">Location</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">home</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="booking.html">book</a></li>
+            <li><a href="location.html">location</a></li>
+            <li><a href="contact.html">contact</a></li>
           </ul>
         </div>
         <div>
@@ -135,7 +154,7 @@
           <p>hello@byteboxottawa.ca</p>
         </div>
       </div>
-      <div class="footer-bottom">© 2026 ByteBox Ottawa. All rights reserved. | SEG3525 UI/UX Design Project</div>
+      <div class="footer-bottom">© 2026 ByteBox Ottawa — all rights reserved | SEG3525 UI/UX Design Project</div>
     </div>
   </footer>
 

@@ -10,13 +10,13 @@
 
   <nav class="nav">
     <div class="container">
-      <a href="index.html" class="nav-logo">Byte<span>Box</span></a>
+      <a href="index.html" class="nav-logo"><span class="prompt">></span> ByteBox<span>_</span></a>
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="booking.html">Book Now</a>
-        <a href="location.html">Location</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">home</a>
+        <a href="services.html">services</a>
+        <a href="booking.html">book</a>
+        <a href="location.html">location</a>
+        <a href="contact.html">contact</a>
       </div>
       <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
         <span></span><span></span><span></span>
@@ -27,26 +27,33 @@
   <section class="booking-section">
     <div class="container">
 
-      <!-- Progress Bar -->
+      <!-- Progress Bar (terminal style) -->
       <div class="progress-bar">
-        <div class="progress-step active">
-          <div class="circle">1</div>
-          <div class="label">Service</div>
+        <div class="progress-steps">
+          <div class="progress-step active">
+            <div class="circle">1</div>
+            <div class="label">Service</div>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step">
+            <div class="circle">2</div>
+            <div class="label">Date & Time</div>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step">
+            <div class="circle">3</div>
+            <div class="label">Your Info</div>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step">
+            <div class="circle">4</div>
+            <div class="label">Review</div>
+          </div>
         </div>
-        <div class="progress-line"></div>
-        <div class="progress-step">
-          <div class="circle">2</div>
-          <div class="label">Date & Time</div>
-        </div>
-        <div class="progress-line"></div>
-        <div class="progress-step">
-          <div class="circle">3</div>
-          <div class="label">Your Info</div>
-        </div>
-        <div class="progress-line"></div>
-        <div class="progress-step">
-          <div class="circle">4</div>
-          <div class="label">Review</div>
+        <div class="progress-bar-visual">
+          <span id="progressText">downloading... </span>
+          <div class="bar" id="progressBar"></div>
+          <span class="progress-label" id="progressPct">25%</span>
         </div>
       </div>
 
@@ -54,54 +61,54 @@
 
         <!-- Step 1: Service -->
         <div class="form-step active" data-step="1">
-          <h2>Select a Service</h2>
+          <h2>> select_service<span class="cursor"></span></h2>
           <p class="step-desc">Choose the service you need. Not sure? Pick "PC Diagnostics" and we'll figure it out together.</p>
           <div class="service-options">
             <div class="service-option" data-service="custom-build">
               <h4>Custom PC Build</h4>
-              <span>From $800</span>
+              <span>from $800.00</span>
             </div>
             <div class="service-option" data-service="diagnostics">
               <h4>PC Diagnostics</h4>
-              <span>$50</span>
+              <span>$50.00</span>
             </div>
             <div class="service-option" data-service="gpu-upgrade">
               <h4>GPU Upgrade</h4>
-              <span>$40</span>
+              <span>$40.00</span>
             </div>
             <div class="service-option" data-service="ram-storage">
               <h4>RAM / Storage Upgrade</h4>
-              <span>$30</span>
+              <span>$30.00</span>
             </div>
             <div class="service-option" data-service="virus-removal">
               <h4>Virus Removal & OS Install</h4>
-              <span>$60</span>
+              <span>$60.00</span>
             </div>
             <div class="service-option" data-service="cable-management">
               <h4>Cable Management</h4>
-              <span>$35</span>
+              <span>$35.00</span>
             </div>
           </div>
           <div class="form-actions">
             <div></div>
-            <button type="button" class="btn btn-primary" data-next>Next →</button>
+            <button type="button" class="btn btn-primary" data-next>[ NEXT >> ]</button>
           </div>
         </div>
 
         <!-- Step 2: Date & Time -->
         <div class="form-step" data-step="2">
-          <h2>Pick a Date & Time</h2>
+          <h2>> pick_datetime<span class="cursor"></span></h2>
           <p class="step-desc">We're open Monday–Saturday, 9 AM – 6 PM. Choose a slot that works for you.</p>
           <div class="form-row">
             <div class="form-group">
-              <label for="bookDate">Date</label>
+              <label for="bookDate">date:</label>
               <input type="date" id="bookDate" required>
-              <div class="error-msg">Please select a valid future date.</div>
+              <div class="error-msg">ERR: please select a valid future date.</div>
             </div>
             <div class="form-group">
-              <label for="bookTime">Preferred Time</label>
+              <label for="bookTime">time:</label>
               <select id="bookTime" required>
-                <option value="">Select a time…</option>
+                <option value="">select a time…</option>
                 <option>9:00 AM</option>
                 <option>10:00 AM</option>
                 <option>11:00 AM</option>
@@ -112,80 +119,80 @@
                 <option>4:00 PM</option>
                 <option>5:00 PM</option>
               </select>
-              <div class="error-msg">Please select a time.</div>
+              <div class="error-msg">ERR: please select a time.</div>
             </div>
           </div>
           <div class="form-actions">
-            <button type="button" class="btn btn-secondary" data-prev>← Back</button>
-            <button type="button" class="btn btn-primary" data-next>Next →</button>
+            <button type="button" class="btn btn-secondary" data-prev><< back</button>
+            <button type="button" class="btn btn-primary" data-next>[ NEXT >> ]</button>
           </div>
         </div>
 
         <!-- Step 3: Client Info -->
         <div class="form-step" data-step="3">
-          <h2>Your Information</h2>
+          <h2>> user_info<span class="cursor"></span></h2>
           <p class="step-desc">We'll use this to confirm your appointment and reach out if needed.</p>
           <div class="form-row">
             <div class="form-group">
-              <label for="clientName">Full Name</label>
-              <input type="text" id="clientName" placeholder="John Doe" required>
-              <div class="error-msg">Please enter your name.</div>
+              <label for="clientName">name:</label>
+              <input type="text" id="clientName" placeholder="john_doe" required>
+              <div class="error-msg">ERR: please enter your name.</div>
             </div>
             <div class="form-group">
-              <label for="clientEmail">Email</label>
+              <label for="clientEmail">email:</label>
               <input type="email" id="clientEmail" placeholder="john@example.com" required>
-              <div class="error-msg">Please enter a valid email.</div>
+              <div class="error-msg">ERR: please enter a valid email.</div>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="clientPhone">Phone</label>
+              <label for="clientPhone">phone:</label>
               <input type="tel" id="clientPhone" placeholder="(613) 555-0100" required>
-              <div class="error-msg">Please enter your phone number.</div>
+              <div class="error-msg">ERR: please enter your phone number.</div>
             </div>
             <div class="form-group">
-              <label for="bikeType">PC Type / Brand</label>
+              <label for="bikeType">pc_type:</label>
               <select id="bikeType" required>
-                <option value="">Select…</option>
+                <option value="">select…</option>
                 <option>Desktop — Custom Build</option>
                 <option>Desktop — Pre-built</option>
                 <option>Laptop</option>
                 <option>Workstation</option>
                 <option>Other</option>
               </select>
-              <div class="error-msg">Please select your PC type.</div>
+              <div class="error-msg">ERR: please select your PC type.</div>
             </div>
           </div>
           <div class="form-group">
-            <label for="bookNotes">Additional Notes (optional)</label>
-            <textarea id="bookNotes" placeholder="Describe the issue or what you're looking for…"></textarea>
+            <label for="bookNotes">notes: (optional)</label>
+            <textarea id="bookNotes" placeholder="describe the issue or what you're looking for…"></textarea>
           </div>
           <div class="form-actions">
-            <button type="button" class="btn btn-secondary" data-prev>← Back</button>
-            <button type="button" class="btn btn-primary" data-next>Review Booking →</button>
+            <button type="button" class="btn btn-secondary" data-prev><< back</button>
+            <button type="button" class="btn btn-primary" data-next>[ REVIEW >> ]</button>
           </div>
         </div>
 
         <!-- Step 4: Review -->
         <div class="form-step" data-step="4">
-          <h2>Review Your Booking</h2>
+          <h2>> review_booking<span class="cursor"></span></h2>
           <p class="step-desc">Please confirm everything looks correct before submitting.</p>
           <div class="review-block">
-            <h4>Service</h4>
-            <div class="review-row"><span class="label">Service</span><span id="revService"></span></div>
-            <div class="review-row"><span class="label">Date</span><span id="revDate"></span></div>
-            <div class="review-row"><span class="label">Time</span><span id="revTime"></span></div>
+            <h4>// service_details</h4>
+            <div class="review-row"><span class="label">service</span><span id="revService"></span></div>
+            <div class="review-row"><span class="label">date</span><span id="revDate"></span></div>
+            <div class="review-row"><span class="label">time</span><span id="revTime"></span></div>
           </div>
           <div class="review-block">
-            <h4>Your Details</h4>
-            <div class="review-row"><span class="label">Name</span><span id="revName"></span></div>
-            <div class="review-row"><span class="label">Email</span><span id="revEmail"></span></div>
-            <div class="review-row"><span class="label">Phone</span><span id="revPhone"></span></div>
-            <div class="review-row"><span class="label">PC Type</span><span id="revPc"></span></div>
+            <h4>// user_details</h4>
+            <div class="review-row"><span class="label">name</span><span id="revName"></span></div>
+            <div class="review-row"><span class="label">email</span><span id="revEmail"></span></div>
+            <div class="review-row"><span class="label">phone</span><span id="revPhone"></span></div>
+            <div class="review-row"><span class="label">pc_type</span><span id="revPc"></span></div>
           </div>
           <div class="form-actions">
-            <button type="button" class="btn btn-secondary" data-prev>← Back</button>
-            <button type="button" class="btn btn-primary" id="submitBooking">Confirm Booking ✓</button>
+            <button type="button" class="btn btn-secondary" data-prev><< back</button>
+            <button type="button" class="btn btn-primary" id="submitBooking">[ EXECUTE ]</button>
           </div>
         </div>
 
@@ -195,19 +202,20 @@
 
   <footer class="footer">
     <div class="container">
+      <div class="footer-divider">════════════════════════════════════════════════════════════════</div>
       <div class="footer-grid">
         <div>
-          <div class="footer-logo">Byte<span>Box</span></div>
+          <div class="footer-logo">> ByteBox_</div>
           <p>Ottawa's trusted destination for custom PC builds, expert repairs, and quality components since 2019.</p>
         </div>
         <div>
-          <h4>Quick Links</h4>
+          <h4>Nav</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="booking.html">Book Now</a></li>
-            <li><a href="location.html">Location</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">home</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="booking.html">book</a></li>
+            <li><a href="location.html">location</a></li>
+            <li><a href="contact.html">contact</a></li>
           </ul>
         </div>
         <div>
@@ -217,7 +225,7 @@
           <p>hello@byteboxottawa.ca</p>
         </div>
       </div>
-      <div class="footer-bottom">© 2026 ByteBox Ottawa. All rights reserved. | SEG3525 UI/UX Design Project</div>
+      <div class="footer-bottom">© 2026 ByteBox Ottawa — all rights reserved | SEG3525 UI/UX Design Project</div>
     </div>
   </footer>
 

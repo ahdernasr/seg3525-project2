@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger.classList.toggle('open');
       navLinks.classList.toggle('open');
     });
-    // Close on link click
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('open');
@@ -22,6 +21,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const href = a.getAttribute('href');
     if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       a.classList.add('active');
+    }
+  });
+
+  // ===== TYPING ANIMATION (hero) =====
+  const typedEl = document.getElementById('typed-heading');
+  if (typedEl) {
+    const text = 'Build Your Dream PC';
+    let i = 0;
+    function typeChar() {
+      if (i < text.length) {
+        typedEl.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeChar, 60 + Math.random() * 40);
+      }
+    }
+    setTimeout(typeChar, 400);
+  }
+
+  // ===== KEYBOARD SHORTCUTS =====
+  document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+    switch(e.key.toLowerCase()) {
+      case 'h': window.location.href = 'index.html'; break;
+      case 's': window.location.href = 'services.html'; break;
+      case 'b': window.location.href = 'booking.html'; break;
     }
   });
 
@@ -53,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         valid = false;
       }
       if (valid) {
-        showToast('Message sent! We\'ll get back to you soon.');
+        showToast('> message_sent — we\'ll get back to you soon.');
         contactForm.reset();
       }
     });
@@ -88,7 +112,6 @@ function initBookingForm() {
   const totalSteps = 4;
   let selectedService = null;
 
-  // Pre-select service from URL param
   const params = new URLSearchParams(location.search);
   const preselect = params.get('service');
 
@@ -101,6 +124,22 @@ function initBookingForm() {
     'cable-management': 'Cable Management & Cleanup'
   };
 
+  function updateProgressBar(step) {
+    const pct = Math.round((step / totalSteps) * 100);
+    const totalBlocks = 20;
+    const filled = Math.round((step / totalSteps) * totalBlocks);
+    const barEl = document.getElementById('progressBar');
+    const pctEl = document.getElementById('progressPct');
+    if (barEl) {
+      let html = '';
+      for (let i = 0; i < totalBlocks; i++) {
+        html += `<span class="block ${i < filled ? 'filled' : 'empty'}">${i < filled ? '█' : '░'}</span>`;
+      }
+      barEl.innerHTML = html;
+    }
+    if (pctEl) pctEl.textContent = pct + '%';
+  }
+
   function showStep(n) {
     document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
     document.querySelector(`[data-step="${n}"]`).classList.add('active');
@@ -112,6 +151,7 @@ function initBookingForm() {
     document.querySelectorAll('.progress-line').forEach((l, i) => {
       l.classList.toggle('active', i + 1 < n);
     });
+    updateProgressBar(n);
   }
 
   // Service selection
@@ -131,7 +171,7 @@ function initBookingForm() {
   document.querySelectorAll('[data-next]').forEach(btn => {
     btn.addEventListener('click', () => {
       if (currentStep === 1 && !selectedService) {
-        showToast('Please select a service.');
+        showToast('ERR: please select a service.');
         return;
       }
       if (currentStep === 2 && !validateStep2()) return;
@@ -158,7 +198,6 @@ function initBookingForm() {
       if (!input.value) { g.classList.add('has-error'); valid = false; }
       else g.classList.remove('has-error');
     });
-    // Date must be in the future
     if (date.value) {
       const selected = new Date(date.value);
       const today = new Date();
@@ -206,14 +245,12 @@ function initBookingForm() {
     document.getElementById('revPhone').textContent = phone;
     document.getElementById('revPc').textContent = pcType;
 
-    // Store for confirmation page
     sessionStorage.setItem('booking', JSON.stringify({
       service: svcName, date, time, name, email, phone, pcType, notes,
       ref: 'BB-' + Math.random().toString(36).substring(2,8).toUpperCase()
     }));
   }
 
-  // Final submit
   const submitBtn = document.getElementById('submitBooking');
   if (submitBtn) {
     submitBtn.addEventListener('click', () => {
@@ -230,7 +267,7 @@ function initConfirmation() {
   if (!box) return;
   const data = JSON.parse(sessionStorage.getItem('booking') || 'null');
   if (!data) {
-    box.innerHTML = '<div style="padding:120px 0;text-align:center"><h1>No Booking Found</h1><p style="color:var(--text-muted);margin:16px 0 32px">It looks like you haven\'t made a booking yet.</p><a href="booking.html" class="btn btn-primary">Book Now</a></div>';
+    box.innerHTML = '<div style="padding:100px 0;text-align:center;font-family:var(--mono)"><h1 style="color:var(--amber)">404: no booking found</h1><p style="color:var(--text-muted);margin:16px 0 32px">It looks like you haven\'t made a booking yet.<br>Run <span style="color:var(--accent)">book_service</span> to get started.</p><a href="booking.html" class="btn btn-primary">[ BOOK NOW ]</a></div>';
     return;
   }
   document.getElementById('confRef').textContent = data.ref;
@@ -242,7 +279,6 @@ function initConfirmation() {
   document.getElementById('confPhone').textContent = data.phone;
   document.getElementById('confPc').textContent = data.pcType;
 
-  // Calendar link
   const calBtn = document.getElementById('calendarBtn');
   if (calBtn) {
     const start = data.date.replace(/-/g,'') + 'T' + data.time.replace(':','') + '00';
