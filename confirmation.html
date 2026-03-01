@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmed — ByteBox Ottawa</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav-logo">Byte<span>Box</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Book Now</a>
+        <a href="location.html">Location</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="confirm-box">
+    <div class="confirm-icon">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h1>Booking Confirmed!</h1>
+    <p class="ref">Reference: <strong id="confRef"></strong></p>
+
+    <div class="confirm-details">
+      <div class="review-row"><span class="label">Service</span><span id="confService"></span></div>
+      <div class="review-row"><span class="label">Date</span><span id="confDate"></span></div>
+      <div class="review-row"><span class="label">Time</span><span id="confTime"></span></div>
+      <div class="review-row"><span class="label">Name</span><span id="confName"></span></div>
+      <div class="review-row"><span class="label">Email</span><span id="confEmail"></span></div>
+      <div class="review-row"><span class="label">Phone</span><span id="confPhone"></span></div>
+      <div class="review-row"><span class="label">PC Type</span><span id="confPc"></span></div>
+    </div>
+
+    <div class="confirm-actions">
+      <a href="#" id="calendarBtn" target="_blank" class="btn btn-secondary">Add to Google Calendar</a>
+      <a href="index.html" class="btn btn-primary">Back to Home</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Byte<span>Box</span></div>
+          <p>Ottawa's trusted destination for custom PC builds, expert repairs, and quality components since 2019.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>245 Rue Rideau, Ottawa, ON</p>
+          <p>(613) 555-0199</p>
+          <p>hello@byteboxottawa.ca</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ByteBox Ottawa. All rights reserved. | SEG3525 UI/UX Design Project</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

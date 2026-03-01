@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Service — ByteBox Ottawa</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav-logo">Byte<span>Box</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="booking.html">Book Now</a>
+        <a href="location.html">Location</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section class="booking-section">
+    <div class="container">
+
+      <!-- Progress Bar -->
+      <div class="progress-bar">
+        <div class="progress-step active">
+          <div class="circle">1</div>
+          <div class="label">Service</div>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step">
+          <div class="circle">2</div>
+          <div class="label">Date & Time</div>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step">
+          <div class="circle">3</div>
+          <div class="label">Your Info</div>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step">
+          <div class="circle">4</div>
+          <div class="label">Review</div>
+        </div>
+      </div>
+
+      <form id="bookingForm" novalidate>
+
+        <!-- Step 1: Service -->
+        <div class="form-step active" data-step="1">
+          <h2>Select a Service</h2>
+          <p class="step-desc">Choose the service you need. Not sure? Pick "PC Diagnostics" and we'll figure it out together.</p>
+          <div class="service-options">
+            <div class="service-option" data-service="custom-build">
+              <h4>Custom PC Build</h4>
+              <span>From $800</span>
+            </div>
+            <div class="service-option" data-service="diagnostics">
+              <h4>PC Diagnostics</h4>
+              <span>$50</span>
+            </div>
+            <div class="service-option" data-service="gpu-upgrade">
+              <h4>GPU Upgrade</h4>
+              <span>$40</span>
+            </div>
+            <div class="service-option" data-service="ram-storage">
+              <h4>RAM / Storage Upgrade</h4>
+              <span>$30</span>
+            </div>
+            <div class="service-option" data-service="virus-removal">
+              <h4>Virus Removal & OS Install</h4>
+              <span>$60</span>
+            </div>
+            <div class="service-option" data-service="cable-management">
+              <h4>Cable Management</h4>
+              <span>$35</span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <div></div>
+            <button type="button" class="btn btn-primary" data-next>Next →</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Date & Time -->
+        <div class="form-step" data-step="2">
+          <h2>Pick a Date & Time</h2>
+          <p class="step-desc">We're open Monday–Saturday, 9 AM – 6 PM. Choose a slot that works for you.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookDate">Date</label>
+              <input type="date" id="bookDate" required>
+              <div class="error-msg">Please select a valid future date.</div>
+            </div>
+            <div class="form-group">
+              <label for="bookTime">Preferred Time</label>
+              <select id="bookTime" required>
+                <option value="">Select a time…</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+                <option>5:00 PM</option>
+              </select>
+              <div class="error-msg">Please select a time.</div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" data-prev>← Back</button>
+            <button type="button" class="btn btn-primary" data-next>Next →</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Client Info -->
+        <div class="form-step" data-step="3">
+          <h2>Your Information</h2>
+          <p class="step-desc">We'll use this to confirm your appointment and reach out if needed.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="clientName">Full Name</label>
+              <input type="text" id="clientName" placeholder="John Doe" required>
+              <div class="error-msg">Please enter your name.</div>
+            </div>
+            <div class="form-group">
+              <label for="clientEmail">Email</label>
+              <input type="email" id="clientEmail" placeholder="john@example.com" required>
+              <div class="error-msg">Please enter a valid email.</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="clientPhone">Phone</label>
+              <input type="tel" id="clientPhone" placeholder="(613) 555-0100" required>
+              <div class="error-msg">Please enter your phone number.</div>
+            </div>
+            <div class="form-group">
+              <label for="bikeType">PC Type / Brand</label>
+              <select id="bikeType" required>
+                <option value="">Select…</option>
+                <option>Desktop — Custom Build</option>
+                <option>Desktop — Pre-built</option>
+                <option>Laptop</option>
+                <option>Workstation</option>
+                <option>Other</option>
+              </select>
+              <div class="error-msg">Please select your PC type.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="bookNotes">Additional Notes (optional)</label>
+            <textarea id="bookNotes" placeholder="Describe the issue or what you're looking for…"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" data-prev>← Back</button>
+            <button type="button" class="btn btn-primary" data-next>Review Booking →</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Review -->
+        <div class="form-step" data-step="4">
+          <h2>Review Your Booking</h2>
+          <p class="step-desc">Please confirm everything looks correct before submitting.</p>
+          <div class="review-block">
+            <h4>Service</h4>
+            <div class="review-row"><span class="label">Service</span><span id="revService"></span></div>
+            <div class="review-row"><span class="label">Date</span><span id="revDate"></span></div>
+            <div class="review-row"><span class="label">Time</span><span id="revTime"></span></div>
+          </div>
+          <div class="review-block">
+            <h4>Your Details</h4>
+            <div class="review-row"><span class="label">Name</span><span id="revName"></span></div>
+            <div class="review-row"><span class="label">Email</span><span id="revEmail"></span></div>
+            <div class="review-row"><span class="label">Phone</span><span id="revPhone"></span></div>
+            <div class="review-row"><span class="label">PC Type</span><span id="revPc"></span></div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" data-prev>← Back</button>
+            <button type="button" class="btn btn-primary" id="submitBooking">Confirm Booking ✓</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Byte<span>Box</span></div>
+          <p>Ottawa's trusted destination for custom PC builds, expert repairs, and quality components since 2019.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>245 Rue Rideau, Ottawa, ON</p>
+          <p>(613) 555-0199</p>
+          <p>hello@byteboxottawa.ca</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ByteBox Ottawa. All rights reserved. | SEG3525 UI/UX Design Project</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
