@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book a Service: ByteBox Ottawa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -102,12 +103,12 @@
           <div class="form-row">
             <div class="form-group">
               <label for="bookDate">date:</label>
-              <input type="date" id="bookDate" required>
+              <input type="date" class="form-control" id="bookDate" required>
               <div class="error-msg">ERR: please select a valid future date.</div>
             </div>
             <div class="form-group">
               <label for="bookTime">time:</label>
-              <select id="bookTime" required>
+              <select class="form-select" id="bookTime" required>
                 <option value="">select a time…</option>
                 <option>9:00 AM</option>
                 <option>10:00 AM</option>
@@ -135,24 +136,24 @@
           <div class="form-row">
             <div class="form-group">
               <label for="clientName">name:</label>
-              <input type="text" id="clientName" placeholder="john_doe" required>
+              <input type="text" class="form-control" id="clientName" placeholder="john_doe" required>
               <div class="error-msg">ERR: please enter your name.</div>
             </div>
             <div class="form-group">
               <label for="clientEmail">email:</label>
-              <input type="email" id="clientEmail" placeholder="john@example.com" required>
+              <input type="email" class="form-control" id="clientEmail" placeholder="john@example.com" required>
               <div class="error-msg">ERR: please enter a valid email.</div>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label for="clientPhone">phone:</label>
-              <input type="tel" id="clientPhone" placeholder="(613) 555-0100" required>
+              <input type="tel" class="form-control" id="clientPhone" placeholder="(613) 555-0100" required>
               <div class="error-msg">ERR: please enter your phone number.</div>
             </div>
             <div class="form-group">
               <label for="bikeType">pc_type:</label>
-              <select id="bikeType" required>
+              <select class="form-select" id="bikeType" required>
                 <option value="">select…</option>
                 <option>Desktop (Custom Build)</option>
                 <option>Desktop (Pre-built)</option>
@@ -165,7 +166,7 @@
           </div>
           <div class="form-group">
             <label for="bookNotes">notes: (optional)</label>
-            <textarea id="bookNotes" placeholder="describe the issue or what you're looking for…"></textarea>
+            <textarea class="form-control" id="bookNotes" placeholder="describe the issue or what you're looking for…"></textarea>
           </div>
           <div class="form-actions">
             <button type="button" class="btn btn-secondary" data-prev><< back</button>
@@ -229,5 +230,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
